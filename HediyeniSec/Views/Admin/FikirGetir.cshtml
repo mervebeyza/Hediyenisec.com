@@ -1,0 +1,26 @@
+﻿@model HediyeniSec.Models.Siniflar.IcimdenGeldi
+
+@{
+    ViewBag.Title = "FikirGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Fikir Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("FikirGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.ID)
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.Baslik)
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama, 20, 1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Image)
+    @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">GÜNCELLE</button>
+}
+

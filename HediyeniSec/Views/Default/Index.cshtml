@@ -1,0 +1,100 @@
+﻿@using HediyeniSec.Models.Siniflar
+@model List<IcimdenGeldi>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<body>   
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:180px">Fikir Bizden, Hediye Senden...</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/pasta.jpg" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Doğum Günü</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/cicek.jpg" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Özel Günler</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/yeniis.jpg" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Yeni İş/Terfi</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/icimdenGeldi.jpg" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>İçimden Geldi</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style="width:650px; height:365px;">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                <li><img src="@x.Image" alt=""></li>                             
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Hediye Fikirleri Sitemize Hoşgeldiniz !</h3>
+                    <p>Sevdiklerinize hediye seçerken size fikir vermek için buradayız. Ailenize, arkadaşınıza hediye vermeyi ihmal etmeyin çünkü hediye sadece bir şey alıp vermek değildir. Aynı zamanda sevgini hissettirip ne kadar değerli olduğunu hissettirmektir.Tabii sevdiklerinize hediye alırken kendinizi de unutmayın. </p>
+                </div>
+                @Html.Action("Partial1","Default")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial3","Default")
+                        @Html.Action("Partial4","Default")
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
+
+
